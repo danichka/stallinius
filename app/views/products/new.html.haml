@@ -1,0 +1,10 @@
+!!!
+%html
+
+%head
+
+%body
+  %h1
+    %em Новый товар
+  = simple_form_for @product, :html => {:multipart => true} do |product_form|
+    = render partial: "form", locals: {product_form: product_form }

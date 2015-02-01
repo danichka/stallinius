@@ -1,0 +1,25 @@
+!!!
+%html
+%head
+  %title Stallinius
+
+
+%body
+  %p
+  #container
+    #name
+    %h2= @product.name
+  
+  #specification
+    %h4 Описание:
+    = @product.specification
+  #price
+    цена: #{number_to_currency(@product.price)}
+
+  #image 
+    = image_tag @product.image.to_s if @product.image?
+
+
+  %p
+  = link_to 'редактировать', edit_product_path
+  = link_to 'удалить', product_path, method: :delete

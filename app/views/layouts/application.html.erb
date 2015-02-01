@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stallinius</title>
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <%= csrf_meta_tags %>
+  </head>
+
+
+  <body>
+    
+    <div class = "container">
+        <div class = "navbar">
+          <div class = "navbar navbar-default">
+            <div class = "container">
+              <div class = "navbar-header">
+                <p class = "btn btn-default"><%= link_to "все товары", products_path %></p>
+                <p class = "btn btn-default"><%= link_to "создать товар", new_product_path %></p>
+              </div>
+              <div class = "collapse navbar-collapse">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    
+
+    <%= yield %>
+  </body>
+
+</html>

@@ -1,0 +1,10 @@
+!!!
+%html
+%head
+
+%body
+  %h3 Изменить данные :
+
+  = form_for @product do |product_form|
+
+    =render partial: "form", locals: {product_form: product_form }

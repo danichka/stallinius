@@ -1,0 +1,13 @@
+!!!
+%head
+
+%body
+.form
+  = form_tag products_path, method: :get do
+    %p
+      = text_field_tag :query, params[:query]
+      = submit_tag "найти", name: nil
+
+%div
+  - @products.each do |e|
+    %p= link_to e.name, product_path(e)

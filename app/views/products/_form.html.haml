@@ -1,0 +1,23 @@
+-# - if @product.errors.any?
+-#   #error_explanation
+-#   %h2
+-#   = pluralize(@product.errors.count, "error")
+-#   prohibited
+-#   this product from being saved:
+-#   %ul
+-#   - @product.errors.full_messages.each do |msg|
+-#   %li= msg
+
+%p
+  = product_form.label :имя
+  = product_form.text_field :name
+%p
+  = product_form.label :описание
+  = product_form.text_field :specification
+%p
+  = product_form.label :цена
+  = product_form.text_field :price
+%p
+  = product_form.file_field :image
+
+= product_form.submit "Сохранить"
