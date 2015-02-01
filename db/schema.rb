@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 20150129145519) do
     t.integer  "cart_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.string   "image"
   end
 
 end

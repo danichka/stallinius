@@ -16,10 +16,10 @@
   #price
     цена: #{number_to_currency(@product.price)}
 
-  #image 
-    = image_tag @product.image.to_s if @product.image?
-
+  %p
+    - for image in @product.images
+      = image_tag image.image_url.to_s
 
   %p
-  = link_to 'редактировать', edit_product_path
-  = link_to 'удалить', product_path, method: :delete
+  = link_to 'редактировать', edit_product_path 
+  = button_to "удалить", @product, :method=>:delete, :class=>:destroy
